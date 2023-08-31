@@ -9,6 +9,7 @@
   "author": "Jeremy Vaudelet",
   "license": "ISC",
   "dependencies": {
+    "ascii-table3": "^0.8.2",
     "axios": "^1.4.0",
     "cli-color": "^2.0.3",
     "sqlite3": "^5.1.6"
