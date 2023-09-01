@@ -11,6 +11,10 @@ class JobDatabase {
     jobIDList = [];
     preparedStatement = null;
 
+    ////////////////////////////////////////////
+    //       Open our SQLite Database
+    ////////////////////////////////////////////
+
     openDatabase() {
         this.databasePTR = new sqlite3.Database(config.DatabaseConfig.name);
         this.databasePTR.run(config.DatabaseConfig.sql, () => {
@@ -60,8 +64,9 @@ class JobDatabase {
     }
 
     ////////////////////////////////////////////
-    //        Generate report for zone
+    //       Generate report for zoneID
     ////////////////////////////////////////////
+
     generateReport(zone) {
         const folderName = this.createFolderIfNotExist(zone);
 

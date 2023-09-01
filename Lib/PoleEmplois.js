@@ -1,19 +1,18 @@
 const axios = require('axios');
 const config = require('../config');
 const database = require('./JobDatabase');
-const logger = require('./logger');
 
 class PoleEmplois {
 
     authToken = null;
 
-    ////////////////////////////////////////////
-    //             Auth to API
-    ////////////////////////////////////////////
-
     constructor() {
         database.openDatabase();
     }
+
+    ////////////////////////////////////////////
+    //             Auth to API
+    ////////////////////////////////////////////
 
     auth(clientID, clientSecret, clientScope) {
 
